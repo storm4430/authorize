@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+  body
+    .navbar-fixed
+      nav.blue-grey.darken-4
+        .nav-wrapper
+          a.right#button-collapse(href="#" data-activates="slide-out")
+            i.material-icons menu
+          ul.right
+            li
+    .container
+      block content
+    ul#slide-out.side-nav
+      li
+        div.userView
+          img.background(src="https://www.firestock.ru/wp-content/uploads/2015/11/Dollar-Photo-Club-Teal-Square-Background-700x393.jpg")
+          a(href="#!user")
+            img.circle(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSbz63M9n4SYuF6oUuZL0f5Zk4MMTnQaInQ3iNJlrcqUTlSk5")
+          a(href="#!name")
+            span.white-text.name Жарков Денис
+          a(href="#!email")
+            span.white-text.email d.zharkov@miactuva.ru
+      li
+        a(href="#!").waves-effect.red-text
+          i.material-icons cloud
+          | First Link With Icon
+      li
+        a(href="#!").waves-effect
+          i.material-icons textsms
+          | Second Link
+        ul
+          li
+            a(href="#!").waves-effect
+              i.material-icons textsms
+              | Second Link
+          li
+            a(href="#!").waves-effect
+              i.material-icons textsms
+              | Second Link
+      li
+        div.divider
+      //li
+      //  a.subheader Subheader
+      li
+        a.waves-effect(href="#!") Third Link With Waves
+
+    script.
+      $(document).ready(function () {
+        $("#button-collapse").sideNav();
+      });
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js")
