@@ -1,6 +1,26 @@
 extends layout
 
 block content
-  //h1.white-text= title
-  //p.white-text Welcome to #{title}
-
+    nav.indigo.darken-3.z-depth-4
+        .nav-wrapper
+            .col.s12(style="margin-left:30px")
+                a(href="/").breadcrumb Главная
+    .carousel.carousel-slider
+        a.carousel-item(href="#one!")
+            img(src="http://lorempixel.com/800/200/business/1")
+        a.carousel-item(href="#two!")
+            img(src="http://lorempixel.com/800/200/business/2")
+        a.carousel-item(href="#three!")
+            img(src="http://lorempixel.com/800/200/business/3")
+        a.carousel-item(href="#four!")
+            img(src="http://lorempixel.com/800/200/business/4")
+    .row
+        h1 Новости системы
+        h4 Релиз №2
+        i Мы сделали эту штуку ещё лучше
+        h4 Релиз №1
+        i Мы сделали охренительную штуку для вас
+    script.
+        $(document).ready(function() {
+            $(".carousel.carousel-slider").carousel({full_width: true});
+        });

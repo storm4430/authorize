@@ -8,9 +8,8 @@ html
     script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
   body
     .navbar-fixed
-      nav.light-blue.darken-4.z-depth-3
+      nav.blue-grey.darken-3
         .nav-wrapper
-          a.center(href="#!" style="margin-left:25px") Система электронного документооборота
           a.right#button-collapse(href="#" data-activates="slide-out")
             i.material-icons menu
           ul.right
@@ -21,36 +20,49 @@ html
       li
         div.userView
           img.background(src="https://www.firestock.ru/wp-content/uploads/2015/11/Dollar-Photo-Club-Teal-Square-Background-700x393.jpg")
-          a(href="#!user")
-            img.circle(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSbz63M9n4SYuF6oUuZL0f5Zk4MMTnQaInQ3iNJlrcqUTlSk5")
-          a(href="#!name")
+          a(href="/")
+            img.circle(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLmaPLhZnnPwCrYoxAY5MI5HsFyiSRsElJPVJIYX9MIAS_9jQaoQ")
+          a(href="/")
             span.white-text.name Жарков Денис
           a(href="#!email")
             span.white-text.email d.zharkov@miactuva.ru
+          a(href="#!org")
+            span.white-text.name МИАЦ Республики Тыва
       li
-        a(href="#!").waves-effect.red-text
-          i.material-icons cloud
-          | First Link With Icon
+        a(href="/dashboard").waves-effect
+          i.material-icons perm_contact_calendar
+          | Личный кабинет
       li
         a(href="#!").waves-effect
-          i.material-icons textsms
-          | Second Link
-        ul
-          li
-            a(href="#!").waves-effect
-              i.material-icons textsms
-              | Second Link
-          li
-            a(href="#!").waves-effect
-              i.material-icons textsms
-              | Second Link
+          i.material-icons call_received
+          | Входящие
+      li
+        a(href="#!").waves-effect
+          i.material-icons call_made
+          | Исходящие
+      li
+        a(href="/reports").waves-effect
+          i.material-icons web
+          | Отчёты
       li
         div.divider
       //li
       //  a.subheader Subheader
       li
-        a.waves-effect(href="#!") Third Link With Waves
-
+        a.waves-effect(href="#!")
+          i.material-icons cloud
+          | Логи операций
+      li
+        div.divider
+      li
+        a.waves-effect(href="#!")
+          i.material-icons settings
+          | Настройки
+    footer.page-footer.blue-grey.darken-3
+      .footer-copyright
+        .container
+          a.grey-text.text-lighten-4.left(href="#!") Система электронного документооборота
+          a.grey-text.text-lighten-4.right(href="#!") АРАСОФТ
     script.
       $(document).ready(function () {
         $("#button-collapse").sideNav();

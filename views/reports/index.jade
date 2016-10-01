@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+    nav.indigo.darken-3.z-depth-4
+        .nav-wrapper
+            .col.s12(style="margin-left:30px")
+                a(href="/").breadcrumb Главная
+                a(href="/reports").breadcrumb Отчёты
+    .row
+        .col.s3.m3.l3
+            .card-panel.indigo.darken-3.z-depth-4
+                a(href="#").white-text.medium
+                    i.material-icons.medium perm_identity
+                    | По исполнителю
+        .col.s3.m3.l3
+            .card-panel.indigo.darken-3.z-depth-4
+                a(href="#").white-text
+                    i.material-icons.medium store
+                    | По организации
+        .col.s3.m3.l3
+            .card-panel.indigo.darken-3.z-depth-4
+                a(href="#").white-text
+                    i.material-icons.medium toc
+                    | По региону
+        .col.s3.m3.l3
+            .card-panel.indigo.darken-3.z-depth-4
+                a(href="#").white-text
+                    i.material-icons.medium recent_actors
+                    | По пиздаболам
