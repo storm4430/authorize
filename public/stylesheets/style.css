@@ -1,8 +1,12 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans+Narrow';
 body {
-  background: url("http://www.zastavki.com/pictures/originals/2012/Backgrounds_Underwater_background_035597_.jpg") no-repeat center bottom fixed;
-  background-size: cover;
+  /*background: url("http://www.fonstola.ru/pic/201111/1920x1200/fonstola.ru-50518.jpg") no-repeat center bottom fixed;*/
+  /*background-size: cover;*/
   /*padding: 50px;*/
-  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  font: 14px 'PT Sans Narrow', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 a {
@@ -11,5 +15,12 @@ a {
 
 #button-collapse{
   margin-right: 25px;
+}
+
+.container{
+  margin-top:10px !important;
+  flex: 1 0 auto;
+  max-width: none !important;
+  width: 90% !important;
 }
 
