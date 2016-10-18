@@ -6,12 +6,19 @@ html
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css")
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+    script(src="https://unpkg.com/react@15.3.2/dist/react.js")
+    script(src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js")
+    script(src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js")
+    script(src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js")
+    script(src="https://unpkg.com/remarkable@1.7.1/dist/remarkable.min.js")
   body
     .navbar-fixed
       nav.blue-grey.darken-3
         .nav-wrapper
           a.right#button-collapse(href="#" data-activates="slide-out")
             i.material-icons menu
+          a.right(href="http://193.124.178.232:100/login?ruri=http://localhost:3000")
+            i.material-icons input
           ul.right
             li
     .container
@@ -49,7 +56,7 @@ html
       //li
       //  a.subheader Subheader
       li
-        a.waves-effect(href="#!")
+        a.waves-effect(href="/logs")
           i.material-icons cloud
           | Логи операций
       li
