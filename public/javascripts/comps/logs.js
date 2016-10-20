@@ -29,6 +29,7 @@ var TestBox = React.createClass({
             url: 'http://193.124.178.232:100/wbp/doclist',
             dataType: 'json',
             cache: false,
+            crossDomain : true,
             success: function(data) {
                 console.log(data);
                 this.setState({data: data});
