@@ -1,98 +1,95 @@
-extends ../layout
-
-block content
-    nav.indigo.darken-3.z-depth-4
-        .nav-wrapper
-            .col.s12(style="margin-left:30px")
-                a(href="/").breadcrumb Главная
-                a(href="/dashboard").breadcrumb Личный кабинет
-    .row
-        .col.s8.m8.l8
-            .row
-                .col.s12.m12.l12
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 1
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 2
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").yellow-text.medium
-                                i.medium 3
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 4
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 5
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 6
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 7
-                                p Январь
-            .row
-                .col.s12.m12.l12
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 8
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 9
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 10
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 11
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 12
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 13
-                                p Январь
-                    div(style="width:13%; float:left; margin-right:5px")
-                        .card-panel.indigo.darken-3.z-depth-4
-                            a(href="#").white-text.medium
-                                i.medium 14
-                                p Январь
-        .col.s4.m4.l4(style="margin-top:10px")
-            .carousel.carousel-slider.center(data-indicators="true")
-                .carousel-fixed-item.center
-                    a.btn.waves-effect.white.grey-text.darken-text-2 Перейти к задаче
-                .carousel-item.red.white-text(href="#one!")
-                    h2 Совещание у директора
-                    p.white-text Место проведения: МИАЦ
-                .carousel-item.amber.white-text(href="#two!")
-                    h2 Контрольный срок
-                    p.white-text Срок исполнения: Письмо #21-45 от 12.12.2015
-    script.
-        $(document).ready(function () {
-            $(".carousel.carousel-slider").carousel({full_width: true});
-        });
+nav.indigo.darken-3.z-depth-4
+    .nav-wrapper
+        .col.s12(style="margin-left:30px")
+            a(href="/").breadcrumb Главная
+            a(href="/dashboard").breadcrumb Личный кабинет
+.row
+    .col.s8.m8.l8
+        .row
+            .col.s12.m12.l12
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 1
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 2
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").yellow-text.medium
+                            i.medium 3
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 4
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 5
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 6
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 7
+                            p Январь
+        .row
+            .col.s12.m12.l12
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 8
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 9
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 10
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 11
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 12
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 13
+                            p Январь
+                div(style="width:13%; float:left; margin-right:5px")
+                    .card-panel.indigo.darken-3.z-depth-4
+                        a(href="#").white-text.medium
+                            i.medium 14
+                            p Январь
+    .col.s4.m4.l4(style="margin-top:10px")
+        .carousel.carousel-slider.center(data-indicators="true")
+            .carousel-fixed-item.center
+                a.btn.waves-effect.white.grey-text.darken-text-2 Перейти к задаче
+            .carousel-item.red.white-text(href="#one!")
+                h2 Совещание у директора
+                p.white-text Место проведения: МИАЦ
+            .carousel-item.amber.white-text(href="#two!")
+                h2 Контрольный срок
+                p.white-text Срок исполнения: Письмо #21-45 от 12.12.2015
+script.
+    $(document).ready(function () {
+        $(".carousel.carousel-slider").carousel({full_width: true});
+    });

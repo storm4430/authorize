@@ -3,21 +3,43 @@ var Comment = React.createClass({
     render: function() {
         return (
             <div className="comment">
-                <h2 className="commentAuthor">
-                    {this.props.author}
-                </h2>
-                {this.props.children}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Автор</th>
+                            <th>Тип</th>
+                            <th>Кратко</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {this.props.author}
+                        </tr>
+                    </tbody>
+                </table>
+                {/*<h2 className="commentAutho23r">*/}
+                    {/*{this.props.author}*/}
+                {/*</h2>*/}
+                {/*{this.props.children}*/}
             </div>
         );
     }
 });
 
+// tutorial10.js
 var CommentList = React.createClass({
     render: function() {
+        var commentNodes = this.props.data.map(function(comment) {
+            return (
+                <Comment author={comment.createrfio} key={comment.id}>
+                    {/*{comment.text}*/}
+                    {/*{comment.typename}*/}
+                </Comment>
+            );
+        });
         return (
             <div className="commentList">
-                <Comment author="Pete Hunt">This is one comment</Comment>
-                <Comment author="Jordan Walke">This is *another* comment</Comment>
+                {commentNodes}
             </div>
         );
     }
@@ -26,7 +48,7 @@ var CommentList = React.createClass({
 var TestBox = React.createClass({
     loadDocsFromServer: function() {
         $.ajax({
-            url: 'http://193.124.178.232:100/wbp/doclist',
+            url: 'http://193.124.178.232:100/wbp/orgsdocs',
             dataType: 'json',
             cache: false,
             crossDomain : true,
@@ -51,7 +73,7 @@ var TestBox = React.createClass({
     render: function() {
         return (
             <div className="TestBox">
-                <h1>Документы</h1>
+                <h2>Документы</h2>
                 <CommentList data={this.state.data} />
         </div>
         );

@@ -21,7 +21,7 @@ html
             i.material-icons input
           ul.right
             li
-    .container
+    .container#container
       block content
     ul#slide-out.side-nav
       li
@@ -33,14 +33,12 @@ html
             span.white-text.name Жарков Денис
           a(href="#!email")
             span.white-text.email d.zharkov@miactuva.ru
-          a(href="#!org")
-            span.white-text.name МИАЦ Республики Тыва
       li
-        a(href="/dashboard").waves-effect
+        a.navigate(href="/dashboard").waves-effect
           i.material-icons perm_contact_calendar
           | Личный кабинет
       li
-        a(href="#!").waves-effect
+        a.navigate(href="/incoming").waves-effect
           i.material-icons call_received
           | Входящие
       li
@@ -48,7 +46,7 @@ html
           i.material-icons call_made
           | Исходящие
       li
-        a(href="/reports").waves-effect
+        a.navigate(href="/reports").waves-effect
           i.material-icons web
           | Отчёты
       li
@@ -62,7 +60,7 @@ html
       li
         div.divider
       li
-        a.waves-effect(href="#!")
+        a.navigate.waves-effect(href="/usettings")
           i.material-icons settings
           | Настройки
     footer.page-footer.blue-grey.darken-3
@@ -75,3 +73,4 @@ html
         $("#button-collapse").sideNav();
       });
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js")
+  script(src="/js/helper/navigate.js")
