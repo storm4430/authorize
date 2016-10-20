@@ -2,45 +2,29 @@
 var Comment = React.createClass({
     render: function() {
         return (
-            <div className="comment">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Автор</th>
-                            <th>Тип</th>
-                            <th>Кратко</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {this.props.author}
-                        </tr>
-                    </tbody>
-                </table>
-                {/*<h2 className="commentAutho23r">*/}
-                    {/*{this.props.author}*/}
-                {/*</h2>*/}
-                {/*{this.props.children}*/}
-            </div>
+                <tr className="doc">
+                    <td>{this.props.author}</td>
+                    <td>{this.props.tip}</td>
+                    <td>{this.props.tit}</td>
+                </tr>
         );
     }
 });
 
-// tutorial10.js
 var CommentList = React.createClass({
     render: function() {
         var commentNodes = this.props.data.map(function(comment) {
             return (
-                <Comment author={comment.createrfio} key={comment.id}>
-                    {/*{comment.text}*/}
-                    {/*{comment.typename}*/}
-                </Comment>
+                    <Comment author={comment.createrfio} key={comment.id} tip={comment.typename} tit={comment.title}>
+                        {/*{comment.text}*/}
+                        {/*{comment.typename}*/}
+                    </Comment>
             );
         });
         return (
-            <div className="commentList">
+            <tbody className="commentList">
                 {commentNodes}
-            </div>
+            </tbody>
         );
     }
 });
@@ -74,7 +58,16 @@ var TestBox = React.createClass({
         return (
             <div className="TestBox">
                 <h2>Документы</h2>
-                <CommentList data={this.state.data} />
+                <table className="highlight bordered">
+                    <thead>
+                        <tr>
+                            <th>Автор</th>
+                            <th>Тип</th>
+                            <th>Кратко</th>
+                        </tr>
+                    </thead>
+                    <CommentList data={this.state.data} />
+                </table>
         </div>
         );
     }
