@@ -1,3 +1,9 @@
-/**
- * Created by codse on 01.10.2016.
- */
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+    res.render("./incoming/index", { title: "Входящие" });
+});
+
+module.exports = router;
