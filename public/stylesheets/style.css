@@ -1,9 +1,9 @@
-@import 'https://fonts.googleapis.com/css?family=PT+Sans+Narrow';
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
 body {
   /*background: url("http://www.fonstola.ru/pic/201111/1920x1200/fonstola.ru-50518.jpg") no-repeat center bottom fixed;*/
   /*background-size: cover;*/
   /*padding: 50px;*/
-  font: 14px 'PT Sans Narrow', sans-serif;
+  font: 14px 'Russo One', sans-serif;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -13,8 +13,9 @@ a {
   color: #00B7FF;
 }
 
-#button-collapse{
+.nav-wrapper{
   margin-right: 25px;
+  margin-left: 25px;
 }
 
 .container{
@@ -26,5 +27,26 @@ a {
 
 .doc{
   cursor: pointer;
+}
+
+#pl{
+  min-height:4px;
+}
+
+.np{
+  margin-left:30px;
+}
+
+strong{
+  font-weight: bold !important;
+}
+
+.cnt{
+  float: left !important;
+}
+
+.p-up{
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 

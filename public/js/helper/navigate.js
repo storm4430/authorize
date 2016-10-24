@@ -5,7 +5,7 @@ var Init = {
             $.get($(this).attr('href'), function (data) {
                 $('#container').html(data);
                 $('.button-collapse').sideNav('hide');
-            }).error(function () {
+            }).fail(function () {
                 alert('No content');
                 $('.button-collapse').sideNav('hide');
             });
