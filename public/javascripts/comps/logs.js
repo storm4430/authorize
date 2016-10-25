@@ -1,13 +1,24 @@
 
-var Comment = React.createClass({
-    render: function() {
+class Comment extends React.Component{
+    constructor() {
+        super();
+        this.onClick = this.handleClick.bind(this);
+    }
+
+    handleClick(event) {
+        const {id} = event.target;
+        console.log(id);
+    }
+
+    render() {
         return (
                 <li>
                     <div className="collapsible-header">
                         <div className="row center">
                             <div className="col s2"><i className="material-icons green-text">info</i>{this.props.author}</div>
-                            <div className="col s4">{this.props.tip}</div>
-                            <div className="col s6">{this.props.tit}</div>
+                            <div className="col s3">{this.props.tip}</div>
+                            <div className="col s5">{this.props.tit}</div>
+                            <div className="col s2 center"><i id={this.props.id} onClick={this.onClick} className="material-icons">visibility</i><i className="material-icons">no_sim</i><i className="material-icons">mode_edit</i></div>
                         </div>
                     </div>
                     <div className="collapsible-body deep-orange lighten-3">
@@ -17,23 +28,21 @@ var Comment = React.createClass({
                     </div>
                 </li>
         );
-    }
-});
+    };
+}
 
 var CommentList = React.createClass({
     render: function() {
         var commentNodes = this.props.data.map(function(comment) {
             return (
-                    <Comment author={comment.createrfio} key={comment.id} tip={comment.typename} tit={comment.title} txt={comment.text}>
-                        {/*{comment.text}*/}
-                        {/*{comment.typename}*/}
+                    <Comment id={comment.id} author={comment.createrfio} key={comment.id} tip={comment.typename} tit={comment.title} txt={comment.text}>
                     </Comment>
             );
         });
         return (
             <ul className="collapsible popout commentList" data-collapsible="accordion">
                 {commentNodes}
-                </ul>
+            </ul>
         );
     }
 });
@@ -72,9 +81,11 @@ var TestBox = React.createClass({
             <div className="TestBox">
                 <nav className="indigo darken-3 z-depth-1">
                     <div className="nav-wrapper">
-                        <div className="col s12">
-                            <a className="breadcrumb navigate" href="/"> Главная</a>
-                            <a className="breadcrumb navigate" href="/history"> История операций</a>
+                        <div className="row">
+                            <div className="col s7">
+                                <a className="breadcrumb navigate" href="/"> Главная</a>
+                                <a className="breadcrumb navigate" href="/history"> История операций</a>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -82,22 +93,17 @@ var TestBox = React.createClass({
                 <ul className="collapsible popout">
                     <li>
                         <div className="indigo darken-3 white-text  p-up">
-                            <div className="row center">
-                                <div className="col s2">Автор</div>
-                                <div className="col s4">Тип документа</div>
-                                <div className="col s6">Кратко</div>
+                            <div className="row">
+                                <div className="col s2 center">Автор</div>
+                                <div className="col s3 center">Тип документа</div>
+                                <div className="col s5 center">Кратко</div>
+                                <div className="col s2">Операции</div>
                             </div>
                         </div>
                         </li>
                 </ul>
-                    {/*<div className="row">*/}
-                        {/*<div className="col s12 tab_h">*/}
-                            {/*<div className="col s2">Автор</div>*/}
-                            {/*<div className="col s4">Тип документа</div>*/}
-                            {/*<div className="col s6">Кратко</div>*/}
-                        {/*</div>*/}
-                    {/*</div>*/}
-                    <CommentList data={this.state.data} />
+                <CommentList data={this.state.data} />
+
         </div>
         );
     }

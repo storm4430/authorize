@@ -50,3 +50,7 @@ strong{
   margin-bottom: 20px;
 }
 
+.material-icons:hover{
+  color: green;
+}
+
