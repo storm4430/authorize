@@ -11,7 +11,8 @@ html
     script(src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js")
     //script(src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js")
     script(src="https://unpkg.com/remarkable@1.7.1/dist/remarkable.min.js")
-    script(type="text/babel" src="javascripts/comps/logs.js")
+
+
   body
     .navbar-fixed
       nav.blue-grey.darken-3
@@ -34,45 +35,24 @@ html
             span.white-text.name Жарков Денис
           a(href="#!email")
             span.white-text.email d.zharkov@miactuva.ru
-      li
-        a.navigate(href="/dashboard").waves-effect
-          i.material-icons perm_contact_calendar
-          | Личный кабинет
-      li
-        a.navigate(href="/incoming").waves-effect
-          i.material-icons call_received
-          | Входящие
-      li
-        a(href="#!").waves-effect
-          i.material-icons call_made
-          | Исходящие
-      li
-        a.navigate(href="/reports").waves-effect
-          i.material-icons web
-          | Отчёты
-      li
-        div.divider
-      //li
-      //  a.subheader Subheader
-      li
-        a.navigate.waves-effect(href="/history")
-          i.material-icons cloud
-          | Логи операций
-      li
-        div.divider
-      li
-        a.navigate.waves-effect(href="/usettings")
-          i.material-icons settings
-          | Настройки
+      #mmenu
     footer.page-footer.blue-grey.darken-3
       .footer-copyright
         .container
           a.grey-text.text-lighten-4.left(href="#!") Система электронного документооборота
           a.grey-text.text-lighten-4.right(href="#!") АРАСОФТ
-    script.
-      $(document).ready(function () {
-        $("#button-collapse").sideNav();
-      });
+
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js")
   script(src="/js/helper/navigate.js")
+  script(type="text/babel" src="javascripts/comps/menu.js")
+  script(type="text/babel" src="javascripts/comps/logs.js")
+  script.
+    window.onload = function() {
+        InitMenu();
+    };
+//    $(document).ready(function () {
+//
+//
+//    });
+
 

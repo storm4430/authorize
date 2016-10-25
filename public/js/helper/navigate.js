@@ -10,5 +10,6 @@ var Init = {
                 $('.button-collapse').sideNav('hide');
             });
         })
+
     }
 }

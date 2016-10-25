@@ -7,7 +7,6 @@ class Comment extends React.Component{
 
     handleClick(event) {
         const {id} = event.target;
-        console.log(id);
     }
 
     render() {
@@ -50,8 +49,9 @@ var CommentList = React.createClass({
 var TestBox = React.createClass({
     loadDocsFromServer: function() {
         $('#pl').html(`<div class="progress green">
-      <div class="indeterminate red"></div>
-  </div>`)
+                        <div class="indeterminate red">
+                        </div>
+                       </div>`)
         $.ajax({
             url: 'http://193.124.178.232:100/wbp/orgsdocs',
             dataType: 'json',
